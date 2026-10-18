@@ -1,0 +1,13 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        for i, char in enumerate(s):
+            if char not in t:
+                return False
+            t = t.replace(char, "", 1)
+            #print(t)
+        
+
+        return True
+        
